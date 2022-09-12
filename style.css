@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ececec;
+    color: black;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#all {
+    margin: 15px 30px 15px 30px;
+    padding: 15px 30px 15px 30px;
+}
+
+#loading {
+    width: 100px;
+    height: 100px;
+    border: solid 5px rgb(0, 0, 0);
+    border-top-color: #5066ad;
+    border-radius: 100%;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+nav {
+    font-size: 1.2rem;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+}
+
+nav ul {
+    list-style: none;
+    margin: 18px 0 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin: 2px 10px;
+}
+
+nav a {
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 1em;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+}
+
+nav a:hover {
+    color: rgb(0, 0, 0);
+}
+
+nav a:hover:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    content: attr(data-text) attr(data-text);
+    color: transparent;
+    line-height: 2;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: rgb(0, 0, 0);
+}
+
+.nav a:hover:after {
+    animation: wavy-slide 3s linear infinite;
+}
+
+@keyframes wavy-slide {
+    to {
+        margin-left: -50.5%;
+    }
+}
+
+nav a.active:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    content: attr(data-text) attr(data-text);
+    color: transparent;
+    line-height: 2;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: rgb(0, 0, 0);
+}
+
+.pageone {
+    padding-right: 35rem;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+h4 {
+    font-size: 22px;
+    font-family: poppins;
+}
+
+#dash {
+    width: 285px;
+    margin-bottom: 2rem;
+}
+
+.image {
+    float: right;
+    margin-top: -24rem;
+    margin-right: 2rem;
+}
+
+#selengkapnya {
+    display: none;
+}
+
+#up {
+    font-weight: bold;
+    font-size: 3rem;
+    display: block;
+    margin-left: 27rem;
+    padding-top: 4rem;
+}
+
+#upp {
+    font-family: roboto;
+    margin: 9rem 0 0 0;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    margin: auto;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: wheat;
+    color: black;
+    transform: rotateY(180deg);
+    width: 300px;
+    height: 300px;
+}
+
+.jdlcard {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.txtcard {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.allup {
+    display: flex;
+}
+
+.upacara{
+    padding: 0 0 3rem 0;
+    margin: 0 0 3rem 0;
+}
+
+.allhome{
+    display: flex;
+}
+
+#rmh{
+    font-weight: bold;
+    font-size: 3rem;
+    display: block;
+    margin-left: 27rem;
+    padding-top: 4rem;
+}
+
+.rumah{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
+}
+
+#bj{
+    font-weight: bold;
+    font-size: 3rem;
+    display: block;
+    margin-left: 27rem;
+    padding-top: 4rem;
+}
+
+.pakaian{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
+}
+
+.allbaju{
+    display: flex;
+}
+
+#seni{
+    font-weight: bold;
+    font-size: 3rem;
+    display: block;
+    margin-left: 27rem;
+    padding-top: 4rem;
+}
+
+.allkesenian{
+    display: flex;
+}
+
+.kesenian{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
+}
+
+#main{
+    font-weight: bold;
+    font-size: 3rem;
+    display: block;
+    margin-left: 27rem;
+    padding-top: 4rem;
+}
+
+.allmain{
+    display: flex;
+}
+
+.permainan{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
+}
+
+#makan{
+    font-weight: bold;
+    font-size: 3rem;
+    display: block;
+    margin-left: 27rem;
+    padding-top: 4rem;
+}
+
+.allmakan{
+    display: flex;
+}
+
+.makanan{
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+}
+
+footer{
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: auto;
+}
